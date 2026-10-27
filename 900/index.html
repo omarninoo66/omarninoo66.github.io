@@ -2,82 +2,76 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>OMAR LUFFY HOST</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMAR LUFFY HOST 9.00</title>
 <style>
-  html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden}
-  body{
-    background: url('luffy.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family: Arial, sans-serif;
-  }
-  #omar-box{
-    background: rgba(0,0,0,0.75);
-    padding: 35px 45px;
-    border-radius: 25px;
-    text-align:center;
-    border: 3px solid gold;
-    box-shadow: 0 0 30px #000;
-    backdrop-filter: blur(8px);
-  }
-  #omar-box h1{
-    color:white;
-    margin:0 0 20px 0;
-    font-size:28px;
-    text-shadow: 0 0 10px black;
-  }
-  #omar-btn{
-    padding:18px 50px;
-    font-size:26px;
-    font-weight:bold;
-    background: linear-gradient(gold, orange);
-    color:black;
-    border:none;
-    border-radius:15px;
-    cursor:pointer;
-    box-shadow: 0 0 15px gold;
-  }
-  #omar-log{
-    color:#00ff88;
-    margin-top:18px;
-    font-size:18px;
-    font-weight:bold;
-  }
+html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden}
+body{
+  background:url('luffy.jpg') no-repeat center center fixed;
+  background-size:cover;
+  background-color:#000;
+}
+#box{
+  position:absolute;
+  left:40px;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.85);
+  padding:25px 30px;
+  border-radius:20px;
+  text-align:center;
+  border:3px solid gold;
+  box-shadow:0 0 25px #000;
+  width:260px;
+}
+#box h1{
+  color:white;
+  margin:0 0 15px 0;
+  font-size:20px;
+  text-shadow:0 0 5px #000;
+}
+#btn{
+  padding:14px 30px;
+  font-size:20px;
+  font-weight:bold;
+  background:linear-gradient(gold, orange);
+  color:black;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  width:100%;
+  box-shadow:0 0 15px gold;
+}
+#log{
+  color:#00ff88;
+  margin-top:12px;
+  font-size:16px;
+  font-weight:bold;
+}
 </style>
 </head>
 <body>
 
-<div id="omar-box">
-  <h1>👑 صالة عمر - ONE PIECE 👑</h1>
-  <button id="omar-btn" onclick="startOmar()">اضغط للتهكير 🔥</button>
-  <div id="omar-log">Ready</div>
+<div id="box">
+  <h1>👑 صالة عمر 👑<br>ONE PIECE</h1>
+  <button id="btn" onclick="go()">اضغط للتهكير 🔥</button>
+  <div id="log">Ready</div>
 </div>
 
-<!-- هاي ملفاتك الاصلية - لا تمسحها من المجلد -->
 <script src="./psfree.js"></script>
 <script src="./payloads.js"></script>
 <script src="./loader.js"></script>
-
 <script>
-function startOmar(){
-  let btn = document.getElementById('omar-btn');
-  let log = document.getElementById('omar-log');
-  btn.style.display='none';
-  log.innerHTML='جاري التهكير...<br>لا تطفي الجهاز - خلي الفلاش راكب';
-  
-  // يشغل التهكير الاصلي مال PSPulse
+function go(){
+  document.getElementById('btn').style.display='none';
+  document.getElementById('log').innerHTML='جاري التهكير...<br>خلي الفلاش راكب';
   setTimeout(()=>{
     try{
-      if(typeof runPSFree === 'function') runPSFree();
-      if(typeof main === 'function') main();
+      if(typeof main==='function') main();
     }catch(e){
-      log.innerHTML='اذا ما تهكر، حدث الصفحة وجرب مرة ثانية';
-      console.log(e);
+      document.getElementById('log').innerHTML='حدث الصفحة وجرب مرة ثانية';
     }
-  }, 600);
+  },500);
 }
 </script>
 
