@@ -2,36 +2,25 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OMAR LUFFY 9.00 OFFLINE</title>
+<title>OMAR 9.00</title>
 <style>
-html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;background:#000}
+html,body{margin:0;padding:0;height:100%;width:100%;background:#000;overflow:hidden}
 #bg{position:fixed;left:0;top:0;width:100%;height:100%;object-fit:contain;background:#000}
-#box{position:absolute;left:30px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.85);padding:20px 25px;border-radius:15px;border:2px solid gold;width:240px;text-align:center;z-index:10}
-#box h1{color:white;font-size:18px;margin:0 0 10px 0}
-#log{color:#00ff88;font-size:15px;font-weight:bold}
+#box{position:absolute;left:25px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.85);padding:18px 22px;border-radius:15px;border:2px solid gold;width:230px;text-align:center;z-index:10}
+h1{color:white;font-size:17px;margin:0 0 8px 0}
+#log{color:#00ff88;font-size:14px;font-weight:bold}
 </style>
 </head>
 <body>
 <img id="bg" src="./luffy.jpg">
-<div id="box">
-  <h1>👑 صالة عمر 👑</h1>
-  <div id="log">جاري التشغيل التلقائي...</div>
-</div>
-
+<div id="box"><h1>👑 صالة عمر 👑</h1><div id="log">جاهز - دخّل الفلاش</div></div>
 <script src="./psfree.js"></script>
 <script src="./payloads.js"></script>
 <script src="./loader.js"></script>
 <script>
 window.onload=function(){
  setTimeout(function(){
-  var l=document.getElementById('log');
-  l.innerHTML='جاري التهكير...';
-  try{
-   if(typeof main==='function') main();
-   else if(typeof runExploit==='function') runExploit();
-   else l.innerHTML='تأكد psfree.js موجود بنفس المجلد';
-  }catch(e){ l.innerHTML='خطأ: '+e.message; }
+  try{ main(); }catch(e){ document.getElementById('log').innerHTML='افتح بالبلي'; }
  },2500);
 };
 </script>
