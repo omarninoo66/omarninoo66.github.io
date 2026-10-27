@@ -2,14 +2,12 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OMAR LUFFY HOST 9.00</title>
+<title>OMAR AUTO</title>
 <style>
 html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden}
 body{
   background:url('luffy.jpg') no-repeat center center fixed;
   background-size:cover;
-  background-color:#000;
 }
 #box{
   position:absolute;
@@ -24,56 +22,31 @@ body{
   box-shadow:0 0 25px #000;
   width:260px;
 }
-#box h1{
-  color:white;
-  margin:0 0 15px 0;
-  font-size:20px;
-  text-shadow:0 0 5px #000;
-}
-#btn{
-  padding:14px 30px;
-  font-size:20px;
-  font-weight:bold;
-  background:linear-gradient(gold, orange);
-  color:black;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-  width:100%;
-  box-shadow:0 0 15px gold;
-}
-#log{
-  color:#00ff88;
-  margin-top:12px;
-  font-size:16px;
-  font-weight:bold;
-}
+#box h1{color:white;margin:0 0 15px 0;font-size:20px}
+#log{color:#00ff88;font-size:18px;font-weight:bold}
 </style>
 </head>
 <body>
-
 <div id="box">
-  <h1>👑 صالة عمر 👑<br>ONE PIECE</h1>
-  <button id="btn" onclick="go()">اضغط للتهكير 🔥</button>
-  <div id="log">Ready</div>
+  <h1>👑 صالة عمر 👑</h1>
+  <div id="log">جاري التشغيل التلقائي...<br>انتظر 3 ثواني</div>
 </div>
 
 <script src="./psfree.js"></script>
 <script src="./payloads.js"></script>
 <script src="./loader.js"></script>
 <script>
-function go(){
-  document.getElementById('btn').style.display='none';
-  document.getElementById('log').innerHTML='جاري التهكير...<br>خلي الفلاش راكب';
+// يشتغل وحده بعد ما تحمل الصفحة
+window.onload = function(){
   setTimeout(()=>{
+    document.getElementById('log').innerHTML='جاري التحميل... خلي الفلاش راكب';
     try{
       if(typeof main==='function') main();
     }catch(e){
       document.getElementById('log').innerHTML='حدث الصفحة وجرب مرة ثانية';
     }
-  },500);
-}
+  }, 2000);
+};
 </script>
-
 </body>
 </html>
