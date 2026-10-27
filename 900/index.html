@@ -1,34 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>OMAR 9.00 FIX</title>
+<title>OMAR 9.00</title>
 <style>
-html,body{margin:0;padding:0;height:100%;width:100%;background:#000;overflow:hidden}
-#bg{position:fixed;left:0;top:0;width:100%;height:100%;object-fit:contain;background:#000;display:none}
-#box{position:absolute;left:25px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.85);padding:18px 22px;border-radius:15px;border:2px solid gold;width:230px;text-align:center;z-index:10}
-h1{color:white;font-size:17px;margin:0 0 8px 0}
-#log{color:#00ff88;font-size:14px;font-weight:bold}
+body{background:black;color:white;text-align:center;font-family:Arial}
+button{padding:10px 20px;font-size:18px;margin-top:20px}
+#log{margin-top:20px;color:#00ff00}
 </style>
 </head>
 <body>
-<img id="bg">
-<div id="box"><h1>👑 صالة عمر 👑</h1><div id="log">جاري التهكير...</div></div>
-
-<script src="./psfree.js"></script>
-<script src="./payloads.js"></script>
-<script src="./loader.js"></script>
+<h1>OMAR 9.00 Jailbreak</h1>
+<div id="log">جاري التحميل...</div>
+<script src="psfree.js"></script>
+<script src="payloads.js"></script>
+<script src="loader.js"></script>
 <script>
-// اظهر الصورة بعد التهكير حتى ما تخرب
-setTimeout(function(){ 
-  var img=document.getElementById('bg');
-  img.src='./luffy.jpg';
-  img.style.display='block';
-}, 3500);
-
-window.onload=function(){
- try{ main(); }catch(e){ document.getElementById('log').innerHTML='خطأ بالتهكير'; }
-};
+function print(x){ document.getElementById('log').innerHTML=x; }
+window.onload=function(){ main(); }
 </script>
 </body>
 </html>
