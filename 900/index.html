@@ -2,50 +2,45 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>OMAR AUTO</title>
+<title>OMAR LUFFY</title>
 <style>
-html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden}
+html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;background:#000}
 body{
   background:url('luffy.jpg') no-repeat center center fixed;
-  background-size:cover;
+  background-size: contain; /* هاي تخلي الصورة كاملة ما تتكبر */
+  background-color:#000;
 }
 #box{
   position:absolute;
-  left:40px;
+  left:30px;
   top:50%;
   transform:translateY(-50%);
-  background:rgba(0,0,0,0.85);
-  padding:25px 30px;
-  border-radius:20px;
+  background:rgba(0,0,0,0.8);
+  padding:20px 25px;
+  border-radius:15px;
+  border:2px solid gold;
+  width:240px;
   text-align:center;
-  border:3px solid gold;
-  box-shadow:0 0 25px #000;
-  width:260px;
 }
-#box h1{color:white;margin:0 0 15px 0;font-size:20px}
-#log{color:#00ff88;font-size:18px;font-weight:bold}
+#box h1{color:white;font-size:18px;margin:0 0 10px 0}
+#log{color:#00ff88;font-size:16px}
 </style>
 </head>
 <body>
 <div id="box">
   <h1>👑 صالة عمر 👑</h1>
-  <div id="log">جاري التشغيل التلقائي...<br>انتظر 3 ثواني</div>
+  <div id="log">جاري التشغيل التلقائي...</div>
 </div>
 
 <script src="./psfree.js"></script>
 <script src="./payloads.js"></script>
 <script src="./loader.js"></script>
 <script>
-// يشتغل وحده بعد ما تحمل الصفحة
 window.onload = function(){
   setTimeout(()=>{
-    document.getElementById('log').innerHTML='جاري التحميل... خلي الفلاش راكب';
-    try{
-      if(typeof main==='function') main();
-    }catch(e){
-      document.getElementById('log').innerHTML='حدث الصفحة وجرب مرة ثانية';
-    }
-  }, 2000);
+    document.getElementById('log').innerHTML='جاري التحميل...';
+    try{ if(typeof main==='function') main(); }catch(e){}
+  },2000);
 };
 </script>
 </body>
